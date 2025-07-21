@@ -50,6 +50,7 @@ button {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
+  border: 1px solid #000;
 }
 .common_title {
   font-weight: 500;
@@ -72,17 +73,17 @@ button {
   background: var(--color-main);
   border-radius: var(--radius);
 }
-.header {
+.hero {
   background: url("./img/main.jpg") no-repeat center center / cover;
   height: 100vh;
 }
-.header_wrapper {
+.hero_wrapper {
   display: flex;
   justify-content: end;
   align-items: center;
   height: 100%;
 }
-.header_block {
+.hero_block {
   width: 80%;
   max-width: 800px;
   display: flex;
@@ -92,8 +93,8 @@ button {
   gap: 1em;
 }
 
-.header_text {
+.hero_text {
   width: 90%;
 }
-.header_button {
+.hero_button {
 }
