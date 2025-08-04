@@ -78,7 +78,7 @@ button {
 }
 .common_input {
   padding: 1em;
-  font-family:var(--family-sec);
+  font-family: var(--family-sec);
   font-weight: 400;
   font-size: var(--font-s);
   border-radius: var(--radius);
@@ -285,7 +285,7 @@ button {
   position: relative;
 }
 .video_block > video {
-width: 100%;
+  width: 100%;
 }
 .video_circle {
   position: absolute;
@@ -312,9 +312,9 @@ width: 100%;
 }
 .service_wrapper {
   padding: 100px 0;
- display: grid;
- grid-template-columns: repeat(4, 1fr);
- gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }
 .service_block {
   display: flex;
@@ -323,20 +323,73 @@ width: 100%;
   align-items: center;
   text-align: center;
 }
-.service_icon  {
-font-size: var(--font-xl);
+.service_icon {
+  font-size: var(--font-xl);
 }
 .service_title {
-font-size: var(--font-xs);
-font-weight: 600;
-text-transform: uppercase;
+  font-size: var(--font-xs);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .service_text {
-font-size: var(--font-s);
-font-weight: 400;
-font-family: var(--family-sec);
-text-align: center;
-max-width: 250px;
+  font-size: var(--font-s);
+  font-weight: 400;
+  font-family: var(--family-sec);
+  text-align: center;
+  max-width: 250px;
+}
+.feedback {
+  color: var(--color-light);
+  background-color: var(--color-main);
+}
+.feedback_wrapper {
+  padding: 100px 0;
+  position: relative;
+}
+.feedback_text {
+  max-width: 700px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  font-family: var(--family-sec);
+  font-size: var(--font-s);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.feedback_arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: var(--font-xl);
+}
+.feedback_left {
+  left: 0;
+}
+.feedback_right {
+  right: 0;
+}
+.feedback_lines {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 2em;
+  display: flex;
+  gap: 6px;
+}
+.feedback_line {
+  cursor: pointer;
+  border-radius: 1px;
+  width: 30px;
+  height: 3px;
+  background: var(--color-light);
+  opacity: 0.7;
+}
+.feedback_active {
+  opacity: 1;
 }
 .brand_wrapper {
   width: 100%;
@@ -357,19 +410,19 @@ max-width: 250px;
   object-position: center;
 }
 .project {
-background-color:  var(--color-grey-5);
+  background-color: var(--color-grey-5);
 }
 .project_wrapper {
   padding: 100px 0;
   margin: 0 auto;
   width: 90%;
   max-width: 760px;
- display: flex;
- gap: 1em;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- text-align: center;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .project_form {
   max-width: 700px;
@@ -378,29 +431,28 @@ background-color:  var(--color-grey-5);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr 3fr 1fr;
   gap: 1em;
-  grid-template-areas: 
-  "name email"
-  "title title"
-  "comment comment"
-  "button button";
+  grid-template-areas:
+    "name email"
+    "title title"
+    "comment comment"
+    "button button";
 }
 .project_input_name {
   grid-area: name;
 }
 .project_input_email {
-  grid-area: email ;
+  grid-area: email;
 }
 .project_input_title {
   grid-area: title;
 }
 .project_input_comment {
-  grid-area: comment ;
+  grid-area: comment;
 }
 .project_button {
   grid-area: button;
-justify-self: center;
+  justify-self: center;
 }
-
 
 @media screen and (min-width: 320px) and (max-width: 567px) {
   .hero_block {
@@ -422,30 +474,29 @@ justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     gap: 1em;
   }
   .gallery_grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .service_wrapper {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .project_form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "title"
+      "comment"
+      "button";
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+  }
+  .project_button {
+    justify-self: stretch;
+  }
 }
-.project_form {
-  grid-template-columns: 1fr;
-  grid-template-areas: 
-  "name"
-  "email"
-  "title"
-  "comment"
-  "button";
-  grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
-}
-.project_button {
-  justify-self: stretch;
-}
-}
-
 
 @media screen and (min-width: 568px) and (max-width: 1024px) {
   .hero_block {
